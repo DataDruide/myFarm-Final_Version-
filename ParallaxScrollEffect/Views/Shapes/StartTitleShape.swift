@@ -1,5 +1,3 @@
-
-
 import Foundation
 import TipKit
 import SwiftUI
@@ -11,7 +9,7 @@ struct StartTitleView: View {
 
     let newStuffTip = NewStuffTip()
     @State private var colors: [Color] = []
-       @EnvironmentObject var viewModel: SecurityViewModel
+    @EnvironmentObject var viewModel: SecurityViewModel
 
     var body: some View {
         HStack {
@@ -24,11 +22,10 @@ struct StartTitleView: View {
             
             HStack(spacing: 16) {
                 Button(action: {
-                            
-                isLogoutSheetPresented.toggle()
-                buttonColor = .red // Ändern Sie die Farbe auf Rot
-                    }) {
-                        Text(NSLocalizedString("Text10", comment: ""))
+                    isLogoutSheetPresented.toggle()
+                    buttonColor = .red // Ändern Sie die Farbe auf Rot
+                }) {
+                    Text(NSLocalizedString("Text10", comment: ""))
                         .foregroundColor(.black)
                         .padding(8)
                         .background(buttonColor)
@@ -50,19 +47,21 @@ struct StartTitleView: View {
             // Setzen Sie die Farbe zurück, wenn die View erscheint
             buttonColor = Color(red: 0.96, green: 0.94, blue: 0.93)
         }
+        
         // Passendes SearchTextField
         TextField("Suche nach myFarm...", text: $searchText)
             .padding()
             .frame(width: 370, height: 55)
             .background(Color(red: 0.96, green: 0.94, blue: 0.93))
             .cornerRadius(10)
-            .onChange(of: searchText) { newValue in
-                                viewModel.validateUserInput()
-                            }
+            .onChange(of: searchText) { _ in
+                viewModel.validateUserInput()
+            }
             .sheet(isPresented: $isLogoutSheetPresented) {
                 LogoutShape(username: "")
                 // Hier wird die LogOutShape oder eine andere Ansicht für das Sheet platziert
             }
+
     }
 }
 
@@ -74,5 +73,4 @@ struct StartTitleView: View {
                 .displayFrequency(.immediate),
                 .datastoreLocation(.applicationDefault)])
         }
-    
 }

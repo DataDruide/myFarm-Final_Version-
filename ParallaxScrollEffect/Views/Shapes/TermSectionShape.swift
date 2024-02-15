@@ -3,7 +3,7 @@
 import SwiftUI
 
 
-struct TermSection: View {
+struct TermSectionShape: View {
     let title: String
     let content: String
     

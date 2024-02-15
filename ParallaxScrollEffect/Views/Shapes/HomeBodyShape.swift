@@ -9,7 +9,7 @@ struct HomeBodyView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            StartHeaderSection() // Anfangsheader-Sektion
+            StartHeaderShape() // Anfangsheader-Sektion
                 .padding()
 
             HeaderSubSectionLazyGrid() // Header-Unterabschnitt mit LazyGrid-Ansicht

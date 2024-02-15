@@ -6,7 +6,14 @@ import UIKit
 
 
 struct Crop: Decodable, Identifiable, Hashable {
-    let id: String
+    
+    
+    
+    
+    
+    
+    
+    let id: Int
     let name: String
     let field_size: String
     let image: String
@@ -31,7 +38,4 @@ struct Crop: Decodable, Identifiable, Hashable {
     let hour_of_sunshine: String
     let description: String
 
-
-
-    
 }

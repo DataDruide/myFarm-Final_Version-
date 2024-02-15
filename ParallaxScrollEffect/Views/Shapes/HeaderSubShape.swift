@@ -24,7 +24,7 @@ struct HeaderSubSectionLazyGrid: View {
                           .overlay(
                             VStack {
                                 HStack {
-                                    Text("Magazines")
+                                    Text("Magazine")
                                         .font(
                                             Font.custom("Chalkduster", size: 18)
                                                 .weight(.semibold)
@@ -100,24 +100,3 @@ struct HeaderSubSectionLazyGrid: View {
     }
 }
 
-
-
-import SwiftUI
-
-struct GardenMagazineView: View {
-    var body: some View {
-        // Hier können Sie den Inhalt Ihrer Gartenmagazin-Ansicht definieren
-        Text("Gartenmagazin")
-            .font(.title)
-            .padding()
-    }
-}
-
-struct GardenShopView: View {
-    var body: some View {
-        // Hier können Sie den Inhalt Ihrer Garten-Shop-Ansicht definieren
-        Text("Garten-Shop")
-            .font(.title)
-            .padding()
-    }
-}
